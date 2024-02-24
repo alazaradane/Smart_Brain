@@ -19,10 +19,7 @@ import bussiness from '../images/BussinessS4.jpeg'
 import superImage from '../images/Super.jpeg';
 
 
-import thumbnailBackground from './thumbnail-background.svg'
-import thumbnailShoe1 from './thumbnail-shoe1.svg'
-import thumbnailShoe2 from './thumbnail-shoe2.svg'
-import thumbnailShoe3 from './thumbnail-shoe3.svg'
+
 
 import security from './security.png'
 import help from './help-desk.png'
@@ -55,11 +52,6 @@ export {
     security,
     help,
     favorites,
-
-    thumbnailBackground,
-    thumbnailShoe1,
-    thumbnailShoe2,
-    thumbnailShoe3,
 
     tiger
 
