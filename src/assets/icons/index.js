@@ -16,7 +16,7 @@ export {
     chevronLeft,
     copyrightSign,
     facebook,
-    hamburger,
+    
     instagram,
     support,
    
