@@ -19,7 +19,7 @@ const ReviewCard = ({imgURL, customerName, feedback, rating}) => {
                 {rating}
             </p>
         </div>
-        <h3 className=' mt-1 font-palanquin font-bold text-3xl text-center'>{customerName}</h3>
+        <h3 className=' mt-1 font-palanquin font-bold text-3xl text-center text-black'>{customerName}</h3>
     </div>
   )
 }

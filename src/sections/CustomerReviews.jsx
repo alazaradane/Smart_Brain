@@ -5,7 +5,7 @@ import ReviewCard from '../components/ReviewCard'
 const CustomerReviews = () => {
   return (
     <section className=' max-container'>
-      <h3 className=' font-palanquin text-4xl font-bold text-center'> What Our <span className=' text-coral-red'>Customers</span> Say?</h3>
+      <h3 className=' font-palanquin text-4xl font-bold text-center text-black'> What Our <span className=' text-coral-blue'>Customers</span> Say?</h3>
       <p className=' info-text m-auto mt-4 max-w-lg text-center'>
         Hear a genuie stories from our satsfied customers about their execptional experinces with us.
       </p>

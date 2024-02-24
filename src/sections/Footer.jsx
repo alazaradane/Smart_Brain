@@ -12,11 +12,12 @@ const Footer = () => {
             <img src={footerLogo} alt="Footer Logo" width={150} height={46} />
           </a>
           <p className=' mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm'>
-            Get Shoes ready for the new term at your nearest store. Find your perfect size in store. Get rewards
+            Get ready to revolutionize your business with our AI SaaS platform. Harness the power of artificial 
+            intelligence to drive innovation.
           </p>
           <div className=' flex items-center gap-5 mt-8 cursor-pointer'>
             {socialMedia.map((icon)=>(
-              <div className=' flex items-center justify-center w-12 h-12 bg-white rounded-full hover:bg-coral-red'>
+              <div className=' flex items-center justify-center w-12 h-12 bg-white rounded-full hover:bg-coral-blue'>
                 <img src={icon.src} alt={icon.alt} width={24} height={24} />
               </div>
             ))}
@@ -28,7 +29,7 @@ const Footer = () => {
               <h4 className=' text-white font-montserrat text-2xl leading-normal font-medium mb-6'>{section.title}</h4>
               <ul>
                 {section.links.map((link)=>(
-                  <li className=' mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-coral-red cursor-pointer'
+                  <li className=' mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-coral-blue cursor-pointer'
                       key={link.name}>
                     <a>{link.name}</a>
                   </li>
