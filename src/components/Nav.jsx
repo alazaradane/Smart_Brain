@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {hamburger} from '../assets/icons/'
+
 import {headerLogo} from '../assets/images/'
 import { navLinks } from '../constants'
 
@@ -23,13 +23,7 @@ const Nav = () => {
             className='font-montserrat leading-normal text-lg text-white hover:text-coral-blue'>{items.label}</a></li>)
           )}
         </ul>
-        <div>
-          <img src={hamburger}
-               alt="hamburger"
-               width={25}
-               height={25}
-               className='hidden max-lg:block'/>
-        </div>
+        
       </nav>
     </header>
   )

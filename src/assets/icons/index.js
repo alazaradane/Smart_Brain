@@ -1,3 +1,4 @@
+
 import arrowRight from './arrow-right.svg'
 import chevronLeft from './chevron-left.svg'
 import cheveronRight from './chevron-right.svg'
@@ -17,12 +18,12 @@ export {
     cheveronRight,
     chevronLeft,
     copyrightSign,
+
     facebook,
-    
+    twitter,
     instagram,
+
     support,
-   
     star,
 
-    twitter
 }

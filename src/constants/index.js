@@ -1,4 +1,4 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
+import { facebook, instagram, twitter } from "../assets/icons";
 import { customer1, customer2, security, favorites, help, face, voice, emotion, bussiness} from "../assets/images";
 
 export const navLinks = [
