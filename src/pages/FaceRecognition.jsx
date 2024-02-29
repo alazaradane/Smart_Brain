@@ -16,7 +16,18 @@ class FaceRecognition extends Component{
   }
 
   onInputChange = (event)=>{
-    console.log(event)
+    console.log(event.target.value)
+  }
+
+  onButtonSubmit = ()=>{
+    console.log('Clicked!')
+    app.models.predict("3de2333d0548430aa691d862cff4d87d","https://samples.clarifai.com/face-det.jpg"),
+      function(response){
+        // Response
+      },
+      function(err){
+        //error
+      }
   }
  
 
@@ -34,7 +45,11 @@ class FaceRecognition extends Component{
               <Rank/>
           </div>
           <div className=' flex justify-center items-center'>
-              <ImageLinkForm onInputChange={this.onInputChange}/>
+              <ImageLinkForm 
+                onInputChange={this.onInputChange}
+                onButtonSubmit={this.onButtonSubmit}
+        
+              />
           </div>
           
       </section>
