@@ -8,7 +8,16 @@ import Rank from '../components/Rank'
 
 
 class FaceRecognition extends Component{
-  
+  constructor(){
+    super()
+    this.state = {
+      input:""
+    }
+  }
+
+  onInputChange = (event)=>{
+    console.log(event)
+  }
  
 
   render() {
@@ -25,7 +34,7 @@ class FaceRecognition extends Component{
               <Rank/>
           </div>
           <div className=' flex justify-center items-center'>
-              <ImageLinkForm />
+              <ImageLinkForm onInputChange={this.onInputChange}/>
           </div>
           
       </section>
