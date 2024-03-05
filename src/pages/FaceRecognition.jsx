@@ -4,7 +4,12 @@ import { headerLogo } from '../assets/images'
 import Button from '../components/Button'
 import ImageLinkForm from '../sections/ImageLinkForm'
 import Rank from '../components/Rank'
+import Clarifai from "clarifai"
+import ImageBox from '../components/ImageBox'
 
+const app = new Clarifai.App({
+  apiKey:"3de2333d0548430aa691d862cff4d87d"
+})
 
 
 class FaceRecognition extends Component{
@@ -21,13 +26,15 @@ class FaceRecognition extends Component{
 
   onButtonSubmit = ()=>{
     console.log('Clicked!')
-    app.models.predict("3de2333d0548430aa691d862cff4d87d","https://samples.clarifai.com/face-det.jpg"),
+    app.models.predict("3de2333d0548430aa691d862cff4d87d","https://samples.clarifai.com/face-det.jpg").then((
       function(response){
         // Response
+        console.log(response)
       },
       function(err){
         //error
       }
+    ))
   }
  
 
@@ -48,8 +55,8 @@ class FaceRecognition extends Component{
               <ImageLinkForm 
                 onInputChange={this.onInputChange}
                 onButtonSubmit={this.onButtonSubmit}
-        
               />
+              <ImageBox/>
           </div>
           
       </section>

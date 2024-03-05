@@ -1,36 +1,36 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 
-import Home from './pages/Home'
+//import Home from './pages/Home'
 import FaceRecognition from './pages/FaceRecognition'
 
-const App = () => {
-
-  // const [inputChange, setInputChange] = useState('')
-
-  // const inputChange = ()=>{
-
-  // }
-  {/*
-    constructor(){
+class App extends Component {
+  
+    constructor() {
       super()
       this.state ={
         input:""
       }
     }
+
     onInputChange = (event)=>{
       console.log(event)
-    */}
+    }
     
-  
-    return (
-      <div className=' bg-black'>
+    render() {
+      return(
+        <div className=' bg-black'>
 
-      <FaceRecognition/>
-      {/* <Home/> */}
-    </div>
-  )
+           <FaceRecognition/>
+           {/* <Home/> */}
+        </div>
+    )
+    }
+    
+    
 
 }
+
+
 export default App
 
 
