@@ -26,13 +26,14 @@ class FaceRecognition extends Component{
 
   onButtonSubmit = ()=>{
     console.log('Clicked!')
-    app.models.predict("3de2333d0548430aa691d862cff4d87d","https://samples.clarifai.com/face-det.jpg").then((
+    app.models.predict("face-detection","https://samples.clarifai.com/face-det.jpg").then((
       function(response){
         // Response
         console.log(response)
       },
       function(err){
         //error
+        console.log(err)
       }
     ))
   }
