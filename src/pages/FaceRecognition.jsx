@@ -16,24 +16,25 @@ class FaceRecognition extends Component{
   constructor(){
     super()
     this.state = {
-      input:""
+      input:"",
+      imageUrl:""
     }
   }
 
   onInputChange = (event)=>{
-    console.log(event.target.value)
+    this.setState({input: event.target.value})
   }
 
   onButtonSubmit = ()=>{
-    console.log('Clicked!')
-    app.models.predict("face-detection","https://samples.clarifai.com/face-det.jpg").then((
-      function(response){
-        // Response
-        console.log(response)
-      },
+    this.setState({imageUrl: this.state.input})
+    app.models.predict('face-detection' , this.state.input).then((
       function(err){
         //error
         console.log(err)
+      },
+      function(response){
+        // Response
+        console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
       }
     ))
   }
@@ -43,7 +44,7 @@ class FaceRecognition extends Component{
     return (
       <section 
           id='#main'
-          className=' max-container bg-black h-screen '>
+          className=' max-container bg-black  '>
       
           <nav className=' flex justify-between items-center'>
               <img src={headerLogo} alt="Logo" width={100} height={100} />
@@ -57,7 +58,9 @@ class FaceRecognition extends Component{
                 onInputChange={this.onInputChange}
                 onButtonSubmit={this.onButtonSubmit}
               />
-              <ImageBox/>
+          </div>
+          <div className=' p-5  bg-black'>
+            <ImageBox imageUrl={this.state.imageUrl}/>
           </div>
           
       </section>
