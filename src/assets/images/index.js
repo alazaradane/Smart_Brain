@@ -26,6 +26,7 @@ import help from './help-desk.png'
 import favorites from './favorites.png'
 
 import tiger from './greek.jpeg'
+import NoImg from './noImg.png'
 
 
 export {
@@ -53,6 +54,7 @@ export {
     help,
     favorites,
 
-    tiger
+    tiger,
+    NoImg
 
 }

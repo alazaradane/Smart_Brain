@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { useState } from 'react'
-import { headerLogo } from '../assets/images'
+import { headerLogo, NoImg } from '../assets/images'
 import Button from '../components/Button'
 import ImageLinkForm from '../sections/ImageLinkForm'
 import Rank from '../components/Rank'
 import Clarifai from "clarifai"
 import ImageBox from '../components/ImageBox'
+
 
 const app = new Clarifai.App({
   apiKey:"3de2333d0548430aa691d862cff4d87d"
@@ -59,8 +60,8 @@ class FaceRecognition extends Component{
                 onButtonSubmit={this.onButtonSubmit}
               />
           </div>
-          <div className=' p-5  bg-black'>
-            <ImageBox imageUrl={this.state.imageUrl}/>
+          <div className=' p-5  bg-black flex items-center justify-center text-white'> 
+                <ImageBox imageUrl={this.state.imageUrl}/>         
           </div>
           
       </section>
@@ -68,4 +69,4 @@ class FaceRecognition extends Component{
     }
 }
 
-export default FaceRecognition
+export default FaceRecognition  
