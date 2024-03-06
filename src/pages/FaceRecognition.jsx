@@ -18,8 +18,28 @@ class FaceRecognition extends Component{
     super()
     this.state = {
       input:"",
-      imageUrl:""
+      imageUrl:"",
+      box:{}
     }
+  }
+
+  calcFaceLocation = (data)=>{
+    const clarifaiFace =  data.outputs[0].data.regions[0].region_info.bounding_box
+    const image = document.getElementById('inputImage')
+    const width = Number(image.width)
+    const height = Number(image.height)
+    //console.log(width, height)
+    return{
+      leftCol: clarifaiFace.left_col * width,
+      topRow: clarifaiFace.top_row * height,
+      rightCol: width - (clarifaiFace.right_col * width),
+      bottomRow: height - (clarifaiFace.bottom_row * height)
+    }
+  }
+
+  displayFaceBox = (box)=>{
+    console.log(box)
+    this.setState({box: box})
   }
 
   onInputChange = (event)=>{
@@ -28,16 +48,10 @@ class FaceRecognition extends Component{
 
   onButtonSubmit = ()=>{
     this.setState({imageUrl: this.state.input})
-    app.models.predict('face-detection' , this.state.input).then((
-      function(err){
-        //error
-        console.log(err)
-      },
-      function(response){
-        // Response
-        console.log(response.outputs[0].data.regions[0].region_info.bounding_box)
-      }
-    ))
+    app.models.predict('face-detection' , this.state.input)
+    .then(response => this.displayFaceBox(this.calcFaceLocation(response)))
+    .catch(err =>console.log(err),
+    )
   }
  
 
@@ -61,7 +75,7 @@ class FaceRecognition extends Component{
               />
           </div>
           <div className=' p-5  bg-black flex items-center justify-center text-white'> 
-                <ImageBox imageUrl={this.state.imageUrl}/>         
+                <ImageBox box={this.state.box} imageUrl={this.state.imageUrl}/>         
           </div>
           
       </section>
