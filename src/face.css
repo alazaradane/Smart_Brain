@@ -5,9 +5,6 @@
   flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
-  top: 0;
-  left: 10%; /* You can adjust this value to reduce the left side size */
-  width: 70%; /* You can adjust this value to adjust the total width */
 }
 
   @media (min-width: 767.98px) {
