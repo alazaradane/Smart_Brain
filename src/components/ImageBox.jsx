@@ -11,7 +11,16 @@ const ImageBox = ({imageUrl, box}) => {
         <img src={NoImg} width={150} height={150}/> 
       </div>
       }
-      <div className='bounding-box' style={{top:box.topRow, right:box.rightCol, bottom: box.bottomRow, left:box.leftCol}}></div>
+      <div className='bounding-box' 
+        style={
+          {
+           top: box.topRow,
+            bottom: box.bottomRow,
+            left: box.leftCol,
+            width: box.rightCol ,
+            position:"absolute"
+          }
+        }></div>
     </div>
   )
 }

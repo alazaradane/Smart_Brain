@@ -74,7 +74,7 @@ class FaceRecognition extends Component{
                 onButtonSubmit={this.onButtonSubmit}
               />
           </div>
-          <div className=' p-5  bg-black flex items-center justify-center text-white'> 
+          <div className=' p-5  bg-black flex items-center justify-center text-white relative' > 
                 <ImageBox box={this.state.box} imageUrl={this.state.imageUrl}/>         
           </div>
           

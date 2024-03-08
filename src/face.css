@@ -1,8 +1,17 @@
 .bounding-box {
-    position: absolute;
-    box-shadow: 0 0 0 3px #149df2 inset;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    cursor: pointer;
+  position: absolute;
+  box-shadow: 0 0 0 3px #149df2 inset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  top: 0;
+  left: 10%; /* You can adjust this value to reduce the left side size */
+  width: 70%; /* You can adjust this value to adjust the total width */
+}
+
+  @media (min-width: 767.98px) {
+    .bounding-box {
+      width: calc(50% - 2px);
+    }
   }
