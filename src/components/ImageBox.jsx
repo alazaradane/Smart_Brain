@@ -4,7 +4,7 @@ import '../face.css'
 
 const ImageBox = ({imageUrl, box}) => {
   return (
-    <div className=' flex items-center justify-center'>
+    <div className=' flex items-center justify-center relative'>
       {imageUrl ? <img id='inputImage' src={imageUrl} alt="image" width='500px' height='auto'/> : 
       <div className=' h-auto absolute'>
         <p className=' text-xl font-palanquin font-bold text-center m-3'>Insert Image</p>
