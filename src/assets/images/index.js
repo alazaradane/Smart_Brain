@@ -27,6 +27,7 @@ import favorites from './favorites.png'
 
 import tiger from './greek.jpeg'
 import NoImg from './noImg.png'
+import HeadSet  from './HeadSet.jpeg'
 
 
 export {
@@ -55,6 +56,8 @@ export {
     favorites,
 
     tiger,
-    NoImg
+    NoImg,
+
+    HeadSet
 
 }

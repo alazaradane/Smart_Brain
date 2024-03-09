@@ -59,7 +59,7 @@ class FaceRecognition extends Component{
     return (
       <section 
           id='#main'
-          className=' max-container bg-black  '>
+          className=' max-container bg-black h-screen  '>
       
           <nav className=' flex justify-between items-center'>
               <img src={headerLogo} alt="Logo" width={100} height={100} />
@@ -74,7 +74,7 @@ class FaceRecognition extends Component{
                 onButtonSubmit={this.onButtonSubmit}
               />
           </div>
-          <div className=' p-5  bg-black flex items-center justify-center text-white relative' > 
+          <div className=' p-5  bg-black flex items-center justify-center text-white relative mt-20' > 
                 <ImageBox box={this.state.box} imageUrl={this.state.imageUrl}/>         
           </div>
           

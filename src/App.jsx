@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 //import Home from './pages/Home'
 import FaceRecognition from './pages/FaceRecognition'
+import SignIn from './pages/SignIn'
 
 class App extends Component {
   
@@ -20,8 +21,9 @@ class App extends Component {
       return(
         <div className=' bg-black'>
 
-           <FaceRecognition/>
+           {/* <FaceRecognition/> */}
            {/* <Home/> */}
+           <SignIn/>
         </div>
     )
     }
