@@ -58,6 +58,8 @@ class FaceRecognition extends Component{
  
 
   render() {
+
+      const {onRouteChange} = this.props
     return (
       <section 
           id='#main'
@@ -65,7 +67,7 @@ class FaceRecognition extends Component{
       
           <nav className=' flex justify-between items-center'>
               <img src={headerLogo} alt="Logo" width={100} height={100} />
-              <Button label="Sign Out" signOut onClick={()=> this.props.onRouteChange('signin')} />
+              <Button label="Sign Out" signOut onClick={()=> onRouteChange('#main')} />
           </nav>
           <div className=' flex justify-center items-center '>
               <Rank/>

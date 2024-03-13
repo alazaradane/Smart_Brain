@@ -10,7 +10,7 @@ class App extends Component {
     constructor() {
       super()
       this.state ={
-        route:"signin"
+        route:"home"
       }
     }
     
@@ -23,11 +23,11 @@ class App extends Component {
         <div className=' bg-black'>
 
            {/* <Home/> */}
-           {this.state.route==='signin' ?
-            <SignIn onRouteChange={this.onRouteChange}/>
+           {this.state.route==='home' ?
+            <Home onRouteChange={this.onRouteChange}/>
             :
+            <SignIn onRouteChange={this.onRouteChange}/>
             
-            <FaceRecognition/>
           }
         </div>
     )

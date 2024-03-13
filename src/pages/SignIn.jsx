@@ -12,7 +12,7 @@ const SignIn = ({onRouteChange}) => {
           <img src={HeadSet} alt="HeadSET" height=' h-screen' className=' max-sm:hidden max-md:hidden ' />  
         </div>
         <div className=' flex   mx-auto h-screen'>
-            <SignForm email password onRouteChange={()=>onRouteChange('home')}/>
+            <SignForm email password onRouteChange={onRouteChange('#main')}/>
         </div>
     </section>
   )
