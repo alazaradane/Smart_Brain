@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../components/Button'
 import { arrowRight } from '../assets/icons'
 import { statistics } from '../constants'
+import { Link } from 'react-router-dom'
 
 import HeroCard from '../components/HeroCard'
 
@@ -20,7 +21,9 @@ const Hero = ({onRouteChange}) => {
           <span className=' inline-block text-coral-blue mt-3'>Smart</span> Brain
         </h1>
         <p className=' font-montserrat text-slate-gray text-lg leading-8 mb-14 mt-6 sm:max-w-sm'>Unveil Cutting-Edge AI Solutions, Elevate Efficiency, and Redefine Possibilities for Your Digital Journey.</p>
-        <Button label="Get Started" iconURL={arrowRight} iconAlt={'Right Arrow Icon'} onClick={()=>onRouteChange('#signin')}/>
+        <Link to="/signin">
+          <Button label="Get Started" iconURL={arrowRight} iconAlt={'Right Arrow Icon'} onClick={'none'}/> 
+        </Link>
 
         <div  className=' flex justify-start items-start gap-16 mt-20 flex-wrap w-full '>
           {statistics.map((stat)=>

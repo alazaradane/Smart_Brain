@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-
-//import Home from './pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FaceRecognition from './pages/FaceRecognition'
 import SignIn from './pages/SignIn'
 import Home from './pages/Home'
@@ -20,16 +19,16 @@ class App extends Component {
 
     render() {
       return(
-        <div className=' bg-black'>
-
-           {/* <Home/> */}
-           {this.state.route==='home' ?
-            <Home onRouteChange={this.onRouteChange}/>
-            :
-            <SignIn onRouteChange={this.onRouteChange}/>
-            
-          }
-        </div>
+        <BrowserRouter>
+          <div className='bg-black'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/facerecognition" element={<FaceRecognition />} />
+              <Route path="/facerecognition/signout" element={<Home/>} />
+            </Routes>
+          </div>
+      </BrowserRouter>
     )
     }
     

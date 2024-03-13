@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from './Button'
 import { headerLogo } from '../assets/images'
+import { Link } from 'react-router-dom'
+import FaceRecognition from '../pages/FaceRecognition'
 
 const SignForm = ({email, password,onRouteChange}) => {
   return (
@@ -20,8 +22,10 @@ const SignForm = ({email, password,onRouteChange}) => {
                     <input type="password" placeholder='Password' className=' p-3 bg-black border border-3 border-coral-blue placeholder:text-white-400 outline-none' />
                 </div>
                 <div className=' mt-3 flex flex-col'>
-                    <Button label={'Sign In'} signup onClick={onRouteChange}/>
-                    <a href="signup" className=' mt-3 text-center hover:text-coral-blue'>Create Account</a>
+                    <Link to={'/facerecognition'} className=' flex justify-center'>         
+                        <Button label={'Sign In'} signup onClick={onRouteChange}/>
+                    </Link>
+                        <a href="signup" className=' mt-3 text-center hover:text-coral-blue'>Create Account</a>
                 </div>
             </div>:"NO Email"  
         }

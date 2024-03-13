@@ -6,6 +6,7 @@ import ImageLinkForm from '../sections/ImageLinkForm'
 import Rank from '../components/Rank'
 import Clarifai from "clarifai"
 import ImageBox from '../components/ImageBox'
+import { Link } from 'react-router-dom'
 
 
 
@@ -67,7 +68,9 @@ class FaceRecognition extends Component{
       
           <nav className=' flex justify-between items-center'>
               <img src={headerLogo} alt="Logo" width={100} height={100} />
-              <Button label="Sign Out" signOut onClick={()=> onRouteChange('#main')} />
+              <Link to={'signout'} >              
+                <Button label="Sign Out" signOut onClick={'nne'} />
+              </Link>
           </nav>
           <div className=' flex justify-center items-center '>
               <Rank/>
