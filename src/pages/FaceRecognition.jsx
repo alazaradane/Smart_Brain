@@ -8,6 +8,8 @@ import Clarifai from "clarifai"
 import ImageBox from '../components/ImageBox'
 
 
+
+
 const app = new Clarifai.App({
   apiKey:"3de2333d0548430aa691d862cff4d87d"
 })
@@ -63,7 +65,7 @@ class FaceRecognition extends Component{
       
           <nav className=' flex justify-between items-center'>
               <img src={headerLogo} alt="Logo" width={100} height={100} />
-              <Button label="Sign Out" signOut />
+              <Button label="Sign Out" signOut onClick={()=> this.props.onRouteChange('signin')} />
           </nav>
           <div className=' flex justify-center items-center '>
               <Rank/>

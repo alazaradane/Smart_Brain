@@ -2,14 +2,14 @@ import React from 'react'
 
 import { CustomerReviews, Hero, Nav, PopularProduct, Services, SpecialOffer, Subscribe, SuperQuality, Footer } from '../sections/index';
 
-const Home = () => {
+const Home = ({onRouteChange}) => {
   return (
     <main 
       id='#home'
       className='relative bg-black text-white'>
         <Nav/>
       <section className='xl:padding-1 wide:padding-r padding-b'>
-        <Hero/>
+        <Hero onRouteChange={onRouteChange}/>
       </section>
       <section className='padding'>
         <PopularProduct/>

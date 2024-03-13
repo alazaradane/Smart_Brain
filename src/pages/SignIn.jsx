@@ -2,7 +2,7 @@ import React from 'react'
 import { HeadSet } from '../assets/images'
 import SignForm from '../components/SignForm'
 
-const SignIn = () => {
+const SignIn = ({onRouteChange}) => {
   return (
     <section
         id='#signin'
@@ -12,7 +12,7 @@ const SignIn = () => {
           <img src={HeadSet} alt="HeadSET" height=' h-screen' className=' max-sm:hidden max-md:hidden ' />  
         </div>
         <div className=' flex   mx-auto h-screen'>
-            <SignForm email password/>
+            <SignForm email password onRouteChange={()=>onRouteChange('home')}/>
         </div>
     </section>
   )
