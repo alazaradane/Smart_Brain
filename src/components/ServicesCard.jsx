@@ -2,7 +2,7 @@ import React from 'react'
 
 const ServicesCard = ({imgURL, label, subtext}) => {
   return (
-    <div className=' flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16'>
+    <div data-aos="zoom-out-down" data-aos-duration="1000" className=' flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16'>
         <div className=' flex justify-center items-center rounded-full w-20 h-20 bg-coral-red'>
             <img src={imgURL} alt={label} width={174} height={174} />
         </div>

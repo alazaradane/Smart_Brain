@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className=' max-container flex flex-col '>
       <div className=' flex justify-between items-start gap-20 flex-wrap max-lg:flex-row '>
-        <div className=' flex items-start flex-col'>
+        <div data-aos="fade-right" data-aos-duration="1000"  className=' flex items-start flex-col'>
           <a href="/">
             <img src={footerLogo} alt="Footer Logo" width={150} height={46} />
           </a>
@@ -15,7 +15,7 @@ const Footer = () => {
             Get ready to revolutionize your business with our AI SaaS platform. Harness the power of artificial 
             intelligence to drive innovation.
           </p>
-          <div className=' flex items-center gap-5 mt-8 cursor-pointer'>
+          <div data-aos="zoom-in" data-aos-duration="1200" className=' flex items-center gap-5 mt-8 cursor-pointer'>
             {socialMedia.map((icon)=>(
               <div className=' flex items-center justify-center w-12 h-12 bg-white rounded-full hover:bg-coral-blue'>
                 <img src={icon.src} alt={icon.alt} width={24} height={24} />
@@ -23,7 +23,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className=' flex justify-between lg:gap-10 gap-20 flex-wrap max-md:gap-10 max-lg:gap-10 max-lg:justify-center'>
+        <div data-aos="fade-up" data-aos-duration="1000" className=' flex justify-between lg:gap-10 gap-20 flex-wrap max-md:gap-10 max-lg:gap-10 max-lg:justify-center'>
           {footerLinks.map((section)=>(
             <div key={section}>
               <h4 className=' text-white font-montserrat text-2xl leading-normal font-medium mb-6'>{section.title}</h4>

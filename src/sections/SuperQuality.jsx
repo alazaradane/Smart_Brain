@@ -7,7 +7,7 @@ const SuperQuality = () => {
     <section
       id='about-us' 
       className=' flex flex-1 flex-row max-sm:flex-col max-lg:flex-col w-full max-container'>
-      <div className=' flex flex-col w-1/2 justify-start mt-12 max-sm:w-full max-md:justify-center max-md:items-center '>
+      <div data-aos="zoom-in-up" data-aos-duration="1000" className=' flex flex-col w-1/2 justify-start mt-12 max-sm:w-full max-md:justify-center max-md:items-center '>
         <h1 className=' font-palanquin text-4xl font-bold mb-5'>We Provide You <span className=' text-coral-blue'>Super Quality</span> AI Services</h1>
         <p className=' mb-6 font-montserrat text-slate-gray'>
           In our SuperQuality section, we integrate cutting-edge AI technology to deliver unparalleled precision and efficiency. 
@@ -24,7 +24,7 @@ const SuperQuality = () => {
         </div>     
           
       </div>
-      <div className=' ml-16 max-sm: flex items-center justify-center mt-6'>
+      <div data-aos="fade-down" data-aos-duration="1000"  className=' ml-16 max-sm: flex items-center justify-center mt-6'>
         <img src={superImage} alt={superImage} className=' object-contain rounded-xl' />
       </div>
 

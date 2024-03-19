@@ -3,7 +3,7 @@ import { star } from '../assets/icons'
 
 const ReviewCard = ({imgURL, customerName, feedback, rating}) => {
   return (
-    <div className=' flex justify-center items-center flex-col'>
+    <div data-aos="flip-up" data-aos-duration="1000" className=' flex justify-center items-center flex-col'>
         <img 
             src={imgURL} alt='customer image'
             className=' rounded-full object-cover w-[120px] h-[120px]' />
